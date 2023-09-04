@@ -1,0 +1,128 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #00FF00 !important; /* Green screen background */
+}
+
+h1{
+    margin: 0;
+}
+
+.container{
+    position: absolute;
+    bottom: 100px;
+}
+
+.chat-input{
+    max-width: fit-content;
+    padding: 10px;
+}
+
+.chat-container {
+    max-width: fit-content;
+    padding: 10px;
+}
+
+.chat-bubble {
+    background-color: white;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.chat-posted {
+    background-color: white;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+    animation: moveUpAndFadeOut 2s ease-in-out forwards;
+}
+
+@keyframes moveUpAndFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+/* Initially hide the input field */
+.hidden {
+    display: none;
+}
+
+dialog{
+    border-radius: 10px;
+    padding: 25px;
+    border: none;
+    transition: opacity 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+dialog[open] {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+dialog::backdrop{
+    background-color: rgba(20, 20, 26, 0.2);
+}
+
+.d_heading{
+    margin-bottom: 10px;
+}
+
+.chat-input input[type="text"] {
+    padding: 10px !important;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: width 0.2s; /* Add a smooth transition for width changes */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.color_picker {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.alignment{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button{
+    padding: 10px;
+    width: 9vh;
+}
+
+.btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
