@@ -118,6 +118,9 @@ dialog::backdrop{
 .button{
     padding: 10px;
     width: 9vh;
+    color: #ffff;
+    background-color: black;
+    border-radius: 5px;
 }
 
 .btn_container{
